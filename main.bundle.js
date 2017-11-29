@@ -278,9 +278,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+window.dataLayer = window.dataLayer || [];
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["_18" /* enableProdMode */])();
 }
+var dataLayerConfig = [
+    {
+        name: 'js',
+        value: new Date()
+    },
+    {
+        name: 'config',
+        value: 'UA-110416750-1'
+    }
+];
+window.dataLayer = window.dataLayer.concat(dataLayerConfig.map(function (obj) { return [obj.name, obj.value]; }));
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app_app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
 
