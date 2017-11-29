@@ -105,7 +105,7 @@ var AboutModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forChild(ABOUT_ROUTES)
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* RouterModule */].forChild(ABOUT_ROUTES)
             ]
         })
     ], AboutModule);

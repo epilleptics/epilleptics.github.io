@@ -60,6 +60,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angulartics2_ga__ = __webpack_require__("../../../../angulartics2/ga/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -70,8 +71,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(googleAnalytics) {
         this.title = 'About Me';
     }
     AppComponent.prototype.ngOnInit = function () {
@@ -82,9 +84,10 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angulartics2_ga__["a" /* Angulartics2GoogleAnalytics */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angulartics2_ga__["a" /* Angulartics2GoogleAnalytics */]) === "function" && _a || Object])
     ], AppComponent);
     return AppComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -107,12 +110,16 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_footer_item_footer_item_component__ = __webpack_require__("../../../../../src/app/shared/footer-item/footer-item.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angulartics2__ = __webpack_require__("../../../../angulartics2/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angulartics2_ga__ = __webpack_require__("../../../../angulartics2/ga/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -137,14 +144,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__shared_footer_item_footer_item_component__["a" /* FooterItemComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6_app_app_routes__["a" /* APP_ROUTES */]),
+                __WEBPACK_IMPORTED_MODULE_4__angular_router__["d" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6_app_app_routes__["a" /* APP_ROUTES */]),
                 __WEBPACK_IMPORTED_MODULE_5__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_material__["a" /* MatButtonModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_material__["c" /* MatToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_material__["b" /* MatSidenavModule */],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */]
+                __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */],
+                __WEBPACK_IMPORTED_MODULE_11_angulartics2__["b" /* Angulartics2Module */].forRoot([__WEBPACK_IMPORTED_MODULE_12_angulartics2_ga__["a" /* Angulartics2GoogleAnalytics */]])
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
         })
@@ -278,21 +286,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-window.dataLayer = window.dataLayer || [];
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["_18" /* enableProdMode */])();
 }
-var dataLayerConfig = [
-    {
-        name: 'js',
-        value: new Date()
-    },
-    {
-        name: 'config',
-        value: 'UA-110416750-1'
-    }
-];
-window.dataLayer = window.dataLayer.concat(dataLayerConfig.map(function (obj) { return [obj.name, obj.value]; }));
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app_app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
 
